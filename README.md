@@ -147,10 +147,12 @@ Keito does not use customer data to train AI models and does not send your data 
 
 ## Disconnect
 
-1. **Revoke access in Keito:** in the Keito web app, open **Settings → Integrations → Connected AI apps** and disconnect **Grok Build**. Grok Build's next Keito call is rejected, and you would have to sign in again to reconnect.
+1. **Revoke access in Keito:** in the Keito web app, open **Settings → Integrations → Connected AI apps** and disconnect **Grok Build**. Within about a minute Grok Build's Keito calls are rejected, including after a token refresh.
 2. **Remove the plugin:** `grok plugin uninstall keito`.
 
 Uninstalling the plugin alone does not revoke access on Keito's side, so do step 1 as well.
+
+To use Keito from Grok Build again, click **Reconnect** in Keito, or sign in afresh. Grok keeps retrying its old sign-in rather than starting a new one, so first remove the `keito:https://mcp.keito.ai/` entry from `~/.grok/mcp_credentials.json`, then open `/mcps`, select **keito**, and press `i`. The new sign-in appears as a new **Grok Build** entry in Keito.
 
 ## Troubleshooting
 
@@ -158,6 +160,7 @@ Uninstalling the plugin alone does not revoke access on Keito's side, so do step
 |---|---|
 | Keito tools don't appear | Make sure the plugin is installed, enabled, and trusted (`grok plugin list`), then press `r` in the Plugins tab or start a new session. |
 | Keito shows as needing authentication | Open `/mcps`, select **keito**, and press `i`. |
+| `i` fails with `Auth failed … Auth required` after you disconnected Grok Build in Keito | Grok is retrying its old sign-in. Click **Reconnect** in Keito, or remove the `keito:https://mcp.keito.ai/` entry from `~/.grok/mcp_credentials.json` and press `i` again. |
 | Opening `https://mcp.keito.ai` in a browser shows `401` | This is expected. The server requires OAuth. |
 | Actions go to the wrong workspace | Ask Grok to run `keito_whoami`. Sign in again with the correct Keito account if needed. |
 | "No matching project" | Ask Grok to list projects first, then use the exact name. |
