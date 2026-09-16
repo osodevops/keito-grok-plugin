@@ -147,8 +147,6 @@ Keito does not use customer data to train AI models and does not send your data 
 
 ## Disconnect
 
-<!-- RELEASE GATE: confirm this path matches the shipped "Connected AI apps" page before tagging v1.0.0. -->
-
 1. **Revoke access in Keito:** in the Keito web app, open **Settings → Integrations → Connected AI apps** and disconnect **Grok Build**. Grok Build's next Keito call is rejected, and you would have to sign in again to reconnect.
 2. **Remove the plugin:** `grok plugin uninstall keito`.
 
