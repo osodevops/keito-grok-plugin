@@ -1,0 +1,19 @@
+{
+  "name": "keito",
+  "version": "1.0.0",
+  "description": "Track project time, timers, AI/LLM usage, and expenses in Keito from Grok Build through Keito's hosted OAuth MCP server.",
+  "author": {
+    "name": "Keito (OSO DevOps Limited)",
+    "email": "support@keito.ai",
+    "url": "https://keito.ai"
+  },
+  "repository": "https://github.com/osodevops/keito-grok-plugin",
+  "homepage": "https://keito.ai/docs/integrations/grok-build",
+  "license": "MIT",
+  "keywords": [
+    "keito",
+    "keito time tracking",
+    "keito agent billing",
+    "keito mcp"
+  ]
+}

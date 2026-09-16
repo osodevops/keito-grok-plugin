@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "keito": {
+      "type": "http",
+      "url": "https://mcp.keito.ai",
+      "note": "Official hosted Keito MCP server. OAuth runs in the browser on first connection; no API key or local helper is required."
+    }
+  }
+}
